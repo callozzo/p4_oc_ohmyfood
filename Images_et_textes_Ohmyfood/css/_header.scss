@@ -1,0 +1,30 @@
+/*****Header******/
+
+.home-page {
+    
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        width: 100%;
+        height: 63px;
+        box-shadow: 0px 2px 4px 0px #00000026;
+    }
+    
+    .location { 
+        background-color: #eaeaea;
+        box-shadow: 0px 4px 4px 0px #00000040, inset 0px 2px 4px 0px #00000026;
+        
+        i {
+            margin-right: 17px;
+        }
+    }
+    
+    div a {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
