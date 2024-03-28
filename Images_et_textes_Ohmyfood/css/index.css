@@ -132,14 +132,6 @@ nav a p {
 .fonctionnement h2 {
   margin-bottom: 26px;
 }
-
-.espacement {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 83%;
-}
-
 .fonctionnement section {
   display: flex;
   justify-content: flex-end;
@@ -147,8 +139,25 @@ nav a p {
   text-align: center;
   height: 30%;
 }
-
-.number {
+.fonctionnement section .list {
+  display: flex;
+  height: 93%;
+  width: 96%;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.fonctionnement section .list h3 {
+  margin-left: 27px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.fonctionnement section .list i {
+  display: flex;
+  align-items: center;
+}
+.fonctionnement section .number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,24 +170,11 @@ nav a p {
   background-color: var(--main-color);
   color: white;
 }
-
-.list {
+.fonctionnement .espacement {
   display: flex;
-  height: 93%;
-  width: 96%;
-  border-radius: 20px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
-}
-.list h3 {
-  margin-left: 27px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-.list i {
-  display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 83%;
 }
 
 /*****Restaurants*****/
@@ -198,23 +194,32 @@ nav a p {
   height: 251px;
   border-radius: 15px;
   background-color: white;
+  z-index: 1;
 }
-.card .new {
+.card .new-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.card .new-card .new {
   display: flex;
   justify-content: center;
   background-color: var(--third-color);
-  position: relative;
-  bottom: 195px;
-  left: 60px;
   width: 80px;
   height: 29px;
   border-radius: 2px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  z-index: 3;
+  margin: 13px 15px 0 0;
 }
-.card .new p {
+.card .new-card .new p {
   font-size: 14px;
   font-weight: 500;
   color: #008766;
+}
+.card .under {
+  position: relative;
+  bottom: 42px;
 }
 .card img {
   display: flex;
@@ -222,12 +227,19 @@ nav a p {
   justify-content: center;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 100% 60%;
-     object-position: 100% 60%;
+  -o-object-position: bottom;
+     object-position: bottom;
+  z-index: 2;
   width: 100%;
   height: 70%;
   border-radius: 15px 15px 0 0;
   margin-bottom: 16px;
+}
+.card .note-enchantee {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 62%;
+     object-position: 100% 62%;
 }
 .card p {
   font-size: 17px;
@@ -252,7 +264,7 @@ nav a p {
 }
 .card .heart:hover .fa-solid {
   display: flex;
-  background: linear-gradient(var(--second-color), var(--main-color));
+  background: linear-gradient(to top, var(--second-color), var(--main-color));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -337,6 +349,9 @@ footer .icon {
 .menu .allignement {
   margin-bottom: 40px;
 }
+.menu .card-menu {
+  width: 90%;
+}
 .menu .heart {
   display: flex;
   justify-content: center;
@@ -354,6 +369,28 @@ footer .icon {
   background: linear-gradient(to top, var(--second-color), var(--main-color));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+.menu .button-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  animation-name: leftslide;
+  animation-duration: 15ms;
+}
+.menu .button-check .fa-circle-check {
+  color: white;
+  font-size: 20px;
+}
+@keyframes leftslide {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
 }
 .menu .order {
   display: flex;
@@ -418,4 +455,101 @@ footer .icon {
   font-weight: 700;
   font-size: 15px;
   margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  nav h2 {
+    font-size: 40px;
+  }
+  main .fonctionnement {
+    padding: 48px 80px 68px 80px;
+    height: 112px;
+  }
+  main .fonctionnement .espacement {
+    display: flex;
+    flex-direction: row;
+    height: 65%;
+  }
+  main .fonctionnement .espacement section {
+    height: 100%;
+    width: 31%;
+  }
+  main .fonctionnement .espacement section .number {
+    position: relative;
+    top: 6px;
+  }
+  main .restaurant {
+    padding: 30px 180px 30px 180px;
+  }
+  main .restaurant .restaurant-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 552px;
+  }
+  main .restaurant .restaurant-card a {
+    width: 46%;
+    height: 46%;
+  }
+  main .restaurant .restaurant-card a .card {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    height: 100%;
+  }
+  main .restaurant .restaurant-card a .card .allignement {
+    display: flex;
+    justify-content: space-between;
+  }
+  main .restaurant .restaurant-card a .card .allignement div {
+    display: flex;
+    flex-direction: column;
+  }
+  main .restaurant .restaurant-card a .card .allignement .new {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 760px;
+    left: 395px;
+  }
+  main .restaurant .restaurant-card a .card .allignement .new-one {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 760px;
+    right: 190px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0;
+  }
+  footer h4 {
+    display: flex;
+    margin: 57px 25px 30px 0;
+  }
+  footer div .icon-footer, footer .contact-footer {
+    padding: 64px 0 30px 0;
+  }
+  footer .text-footer {
+    display: flex;
+    align-items: flex-end;
+  }
+  footer .text-footer .icon-footer .space {
+    margin-right: 7px;
+    width: 190px;
+  }
+  footer .text-footer div {
+    display: flex;
+  }
+  footer .text-footer .contact-footer {
+    margin-right: 9px;
+  }
+  footer .text-footer .contact-footer p {
+    margin-right: 7px;
+    width: 130px;
+  }
 }/*# sourceMappingURL=index.css.map */
