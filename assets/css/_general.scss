@@ -1,0 +1,60 @@
+/******Général******/
+
+* {
+    font-family: 'roboto', sans-serif;
+}
+
+:root {
+    --main-color: #9356dc;
+    --second-color: #ff79da;
+    --third-color: #99e2d0;
+}
+
+.grey {
+    color: #7e7e7e;
+}
+
+.purple {
+    color: #9356dc;
+}
+
+.black {
+    color: black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'shrikhand', sans-serif;
+    font-size: 30px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 28px;
+    font-family: 'shrikhand', sans-serif;
+    margin: 32px 0 40px 0;
+    padding-left: 4px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

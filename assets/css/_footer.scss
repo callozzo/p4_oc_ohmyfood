@@ -1,0 +1,44 @@
+/*****Footer******/
+
+footer {
+    background-color: #353535;
+    padding: 22px 0 15px 25px;
+
+    h4 {
+        font-family: 'shrikhand', sans-serif;
+        color: white;
+        margin: 0 0 16px 0;
+    }
+
+    .space {
+
+        padding: 0;
+        display: flex;
+        text-align: center;
+
+
+        p {
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 11px;
+        }
+    }
+
+    p {
+        color: white;
+        margin: 0 0 7px 0;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        width: 13px;
+        height: 19px;
+        
+        color: white;
+    }
+}
+
+.note {
+    position: relative; top: 79px;
+}

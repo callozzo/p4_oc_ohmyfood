@@ -1,0 +1,208 @@
+/*******Main*******/
+
+.loader-container {
+    position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%,-50%);
+}
+
+.loader {
+    display: flex;
+    border: 16px solid #9356dc;
+    border-radius: 50%;
+    border-top: 16px solid #353535;
+    border-bottom: 16px solid #353535;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear forwards; /*le "forwards" sert a ce que l'animation s'efface a la fin*/
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    70% {opacity: 1;}
+    100% { transform: rotate(360deg); opacity: 0;}
+}
+
+.opacity {
+    animation: loader 2s;
+}
+
+@keyframes loader {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/********Fonctionnement*******/
+
+.fonctionnement {
+    padding: 48px 20px 68px 20px;
+    height: 324px;
+
+    h2 {
+        margin-bottom: 26px;
+    }
+
+    section {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        height: 30%;
+
+        .list {
+            display: flex;
+            height: 93%;
+            width: 96%;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px #00000026;
+        
+            h3 {
+                margin-left: 27px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+            }
+        
+            i {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            position: relative; right: 12px; top: 10px;
+            width: 24px;
+            height: 24px;
+            border-radius: 20px;
+            background-color: var(--main-color);
+            color: white;
+        }
+    }
+
+    .espacement {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 83%;
+    }
+}
+
+/*****Restaurants*****/
+
+.restaurant {
+    background-color: #f3f3f3;
+    padding: 54px 17px 66px 17px;
+
+    h2 {
+        margin:0 0 30px 3px;
+        height: 100%;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 18px;
+    height: 251px;
+    border-radius: 15px;
+    background-color: white;
+    z-index: 1;
+
+    .new-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    
+        .new {
+            display: flex;
+            justify-content: center;
+            background-color: var(--third-color);
+            width: 80px;
+            height: 29px;
+            border-radius: 2px;
+            box-shadow: 0px 2px 4px 0px #00000026;
+            z-index: 3;
+            margin: 13px 15px 0 0;
+
+            p {
+                font-size: 14px;
+                font-weight: 500;
+                color: #008766;
+            }
+        }
+    }
+
+    .under {
+        position: relative; bottom: 42px;
+    }
+    
+    img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        object-fit: cover;
+        object-position: 100% 62%;
+        z-index: 2;
+
+
+        width: 100%;
+        height: 70%;
+        border-radius: 15px 15px 0 0;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 17px;
+        color: black;
+        margin: 5px 0 12px 0;
+    }
+
+    h4 {
+        color: black;
+        margin: 0;
+    }
+
+    .heart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+
+        .fa-solid {
+            display: none;
+        }
+
+        &:hover {
+            .fa-regular {
+                display: none;
+            }
+
+            .fa-solid {
+                display: flex;
+                background: linear-gradient(to top, var(--second-color), var(--main-color));
+ 
+                -webkit-text-fill-color: transparent; /*donner la couleur grandient au coeur*/
+                -webkit-background-clip: text; /*donner la forme du coeur et non du parent*/
+                animation: opacity 1s forwards;
+            }
+        }
+    }
+}
+
+@keyframes opacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.allignement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 13px;
+}
